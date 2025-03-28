@@ -108,7 +108,7 @@ section{
     width: 50%;
 }
 .about_title{
-    
+    background: #1d1d1d;
     
     padding: 25px 50px;
 
@@ -116,7 +116,7 @@ section{
 
 }
 .about_text{
-    background: #bcbcbc;
+    background: #bfbfbf;
     padding: 25px 50px;
 }
 
@@ -215,6 +215,10 @@ a{
     
     .banner{
         justify-content: center;
+        
+    }
+    .portrait{
+        margin-bottom: 100px;
     }
     .banner_img{
         width: 100%;
@@ -269,4 +273,35 @@ a{
         width: 50%;
         
     }
+    .app{
+        justify-content: center;
+        flex-direction: column-reverse;
+        margin-bottom: 100px;
+    }
+    .app_img{
+        margin:  0 0 25px 0;
+    }
+    .footer_info{
+        font-size: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 411px){
+ h1{
+     font-size: 40px;
+ }   
+ h2{
+     font-size: 15px;
+ }
+ p{
+     font-size: 15px;
+ }
+    .banner_citate{
+        height: 100px;
+    }
+    .about_img{
+        width: 90%;
+    }
+ 
 }
