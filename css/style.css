@@ -167,6 +167,7 @@ section{
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .slider_image{
     height: 300px;
