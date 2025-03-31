@@ -8,6 +8,9 @@ html{
     background: #1d1d1d;
     color: #fff;
 }
+.disable{
+    display: none;
+}
 .citate{
     padding: 0 50px;
     margin: 0 0 200px 0;
@@ -170,13 +173,19 @@ section{
     width: 600px;
 }
 
-
+.actived{
+    background: #fff;
+}
+.slider_dotes{
+    display: flex;
+    justify-content: center;
+}
 .slider_dote{
     height: 10px;
     width: 10px;
     border-radius: 100px ;
-    background: #fff;
-    margin: 25px auto 0;
+    border: 2px solid;
+    margin: 25px 5px 0 5px;
 }
 .slider_prew img{
     width: 100px;
