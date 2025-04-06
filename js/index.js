@@ -1,41 +1,44 @@
 'use strict'
 
 let sliderImg = document.querySelectorAll('.slider_image'),
-    sliderNext = document.querySelector('.slider_next'),
-    sliderPrew = document.querySelector('.slider_prew'),
-    sliderDote = document.querySelectorAll('.slider_dote');
-   
- let index = 0; 
+sliderNext = document.querySelector('.slider_next'),
+sliderPrew = document.querySelector('.slider_prew'),
+sliderDote = document.querySelector('.slider_dote'),
+sliderDotes = document.querySelector('.slider_dotes'),
+sliderDot = document.createElement("div");
 
-function del(){
+// let index = 0;
+
+
+let index = 0;
+
+function del(a){
     sliderImg.forEach((item)=>{
         item.classList.add('disable');
     });
-    sliderDote.forEach((item)=>{
-        item.classList.remove('actived'); 
-    });
+    sliderImg[a].classList.remove('disable');
+    
 }
+del(index);
 
-
-del();
-
-function slid(i){
-    sliderImg[i].classList.remove('disable');
-    sliderDote[i].classList.add('actived');
-}
-slid(index);
-sliderPrew.addEventListener('click', function(){
-   del();
-   slid(index--);
-   if(index < 0){
-       index = 2;
-   }
-  
+sliderNext.addEventListener('click', function(){
+    index++;
+     let len = sliderImg.length;
+     if(len == index){
+         index = 0;
+     }
+    
+    
+    del(index);
 });
-sliderNext.addEventListener('click', ()=>{
-    del();
-    slid(index++);
-    if(index > 2){
-        index = 0;
-    }
+
+sliderPrew.addEventListener('click', function(){
+    
+     let len = sliderImg.length;
+     if(index == 0){
+         index = len;
+     }
+    index--;
+    
+    del(index);
 });
